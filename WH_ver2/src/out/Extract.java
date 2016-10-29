@@ -21,7 +21,6 @@ public class Extract {
 		return img;
 	};
 	public void extracting(Image img, Image w, BlockChoice b, CoefChoice pikseli, Alpha a){
-		//double alpha = a.fja_alpha(img.get_nizmat());
 		ArrayList<Integer> blk = new ArrayList<Integer>();
 		Class<? extends BlockChoice> s = b.getClass();
 		String name = s.getName();
