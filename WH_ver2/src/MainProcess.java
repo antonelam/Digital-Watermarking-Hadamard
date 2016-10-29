@@ -37,7 +37,6 @@ public class MainProcess {
 	}
 	
 	static public void startAttack(String path){
-		//Attack.postprocessing(Attack.scale(path), path);
 		Attack.crop_left_h((Attack.preprocessing(path)));
 	}
 
