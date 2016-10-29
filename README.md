@@ -8,7 +8,7 @@
 - If you want to work on this code, you can download it I change localy
 
 # Description:
-- This code implements essential part of loading images, divading them into blocks and converting them from RGB to YUV color space
+- This code implements essential part of loading images, dividing them into blocks and converting them from RGB to YUV color space (and vice versa)
 - Images are converted to Hadamard coefficients and processed using Hadamard transformation
 - One of the images is a watermark which is breaked down into coefficients and then inserted into the second image
 - Watermark is invisible
