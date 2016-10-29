@@ -19,7 +19,6 @@ public class CoefChoiceOne extends CoefChoice{
 		int[] k = new int[2];
 		k[0] = n[0];
 		k[1] = n[1];
-		//int [] k = {1,1};
 		piksel.add(k);
 	
 		return piksel;
