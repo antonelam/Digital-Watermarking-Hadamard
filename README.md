@@ -5,7 +5,7 @@
 - If you try to run this code, it won't work
 
 - This is not intended for active changing (there are to many parts missing)
-- If you want to work on this code, you can download it I change localy
+- If you want to work on this code, you can download it I change locally
 
 # Description:
 - This code implements essential part of loading images, dividing them into blocks and converting them from RGB to YUV color space (and vice versa)
