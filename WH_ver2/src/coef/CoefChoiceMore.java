@@ -77,25 +77,9 @@ public class CoefChoiceMore extends CoefChoice{
 			else
 				i--;
 		}
-		/*for(int j = 0; j < piksel.size(); j++){
-			System.out.println(piksel.get(j)[0]+" "+piksel.get(j)[1]);
-			
-		}*/
+		
 		return piksel;
-		/*for(int j = 0; j < (int)Math.pow(2,red); j++){
-			for(int k = 0; k < (int)Math.pow(2,red); k++){
-				if((0 < (Math.abs(blok[j][k])))
-						&& ((Math.abs(blok[j][k])) < 100)
-						&&(j!=0)&&(k!=0))
-				{
-					if(piksel.size() == N)
-						break;
-					int [] n = {j,k};
-					piksel.add(n);
-				}
-			}
-		}
-		return piksel;*/
+		
 	}
 	
 	public void set_number(int N){
