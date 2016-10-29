@@ -56,7 +56,6 @@ public class Insert {
 		for(int i: blk){
 			ArrayList<int[]> p = pikseli.fja_odabir_koef_blok(img.get_hadmat().get(i), img.get_red());
 			double alpha = a.fja_alpha(img.get_komadi()[i], img.get_hadmat().get(i));
-			//System.out.println(alpha);
 			for(int[] j: p){
 				if(count < koefW.size()){
 					img.get_hadmat().get(i)[j[0]][j[1]] = alpha * koefW.get(count);
@@ -65,7 +64,6 @@ public class Insert {
 				}				
 			}
 		
-		//System.out.println(popis.size());
 		}
 
 	public void postprocessing(Image img, String path, String extension){
