@@ -16,16 +16,12 @@ public class CoefChoiceOne extends CoefChoice{
 				}
 			}
 		}
-		//System.out.println(Integer.toString(n[0])+' '+Integer.toString(n[1])+"d");
 		int[] k = new int[2];
 		k[0] = n[0];
 		k[1] = n[1];
 		//int [] k = {1,1};
 		piksel.add(k);
 	
-		/*for(int[] p : piksel){
-			System.out.println(Integer.toString(p[0])+' '+Integer.toString(p[1]));
-		}*/
 		return piksel;
 	}
 
