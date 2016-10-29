@@ -78,17 +78,6 @@ public class Attack {
 		Image c = i.copyRect(i.getWidth()/4,i.getHeight()/4,i.getWidth()/2,i.getHeight()/2);
 		return c;
 	}
-	/*static public Image crop_in(Image c){
-		
-		Image i = c.copyRect(0,0,c.getWidth(),c.getHeight());
-		for(int j = i.getWidth()/4; j<i.getWidth()*3/4; j++){
-			for(int k = i.getHeight()/4; k<i.getHeight()*3/4; k++){
-				i.setColor(j, k, Color.BLACK);
-			}
-		}
-				
-		return i;
-	}*/
 	
 	static public Image gauss(Image i, double num){
 		 GaussianFilter blur = new GaussianFilter();
@@ -100,40 +89,42 @@ public class Attack {
 	@SuppressWarnings("resource")
 	static public void jpeg_compression(String path) throws IOException{
 
-        File imageFile = new File(path);
-        File compressedImageFile = new File("privremeno.jpg");
-        InputStream is = new FileInputStream(imageFile);
-        OutputStream os = new FileOutputStream(compressedImageFile);
-        float quality = 0.5f;
-        // create a BufferedImage as the result of decoding the supplied InputStream
-        BufferedImage image = ImageIO.read(is);
-        // get all image writers for JPG format
-        Iterator<ImageWriter> writers = ImageIO.getImageWritersByFormatName("jpg");
-        if (!writers.hasNext())
-            throw new IllegalStateException("No writers found");
-        ImageWriter writer = (ImageWriter) writers.next();
-        ImageOutputStream ios = ImageIO.createImageOutputStream(os);
-        writer.setOutput(ios);
-        ImageWriteParam param = writer.getDefaultWriteParam();
-        // compress to a given quality
-        param.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
-        param.setCompressionQuality(quality);
-        // appends a complete image stream containing a single image and
-        //associated stream and image metadata and thumbnails to the output
-        writer.write(null, new IIOImage(image, null, null), param);
-        // close all streams
-        is.close();
-        os.close();
-        ios.close();
-        writer.dispose();
-        BufferedImage notsofast = ImageIO.read(compressedImageFile);
-        ImageIO.write(notsofast, "jpg", imageFile);
-        compressedImageFile.delete();
+        	File imageFile = new File(path);
+       		File compressedImageFile = new File("privremeno.jpg");
+        	InputStream is = new FileInputStream(imageFile);
+        	OutputStream os = new FileOutputStream(compressedImageFile);
+        	float quality = 0.5f;
+        	// create a BufferedImage as the result of decoding the supplied InputStream
+        	BufferedImage image = ImageIO.read(is);
+        	// get all image writers for JPG format
+        	Iterator<ImageWriter> writers = ImageIO.getImageWritersByFormatName("jpg");
+        	if (!writers.hasNext())
+            		throw new IllegalStateException("No writers found");
+        	ImageWriter writer = (ImageWriter) writers.next();
+        	ImageOutputStream ios = ImageIO.createImageOutputStream(os);
+        	writer.setOutput(ios);
+        	ImageWriteParam param = writer.getDefaultWriteParam();
+        	// compress to a given quality
+        	param.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
+        	param.setCompressionQuality(quality);
+        	// appends a complete image stream containing a single image and
+        	//associated stream and image metadata and thumbnails to the output
+        	writer.write(null, new IIOImage(image, null, null), param);
+        	// close all streams
+        	is.close();
+        	os.close();
+        	ios.close();
+        	writer.dispose();
+		
+        	BufferedImage notsofast = ImageIO.read(compressedImageFile);
+        	ImageIO.write(notsofast, "jpg", imageFile);
+        	compressedImageFile.delete();
 	}
 	static public void postprocessing(Image i, String path, int num) throws IOException{
 		
 		//i.saveAs(path);
-		/*NOTE: 0 -> crop left
+		/*
+		* NOTE: 0 -> crop left
 		* 1 -> crop top
 		* 2 -> crop out
 		*/
@@ -173,7 +164,7 @@ public class Attack {
 		gg.dispose();
 		
 		ImageIcon icon = new ImageIcon(test);
-		//icon.paintIcon(new Label("No preview"), gg, 0, 0);
+
 		return icon;
 	}
 
