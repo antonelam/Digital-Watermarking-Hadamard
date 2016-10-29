@@ -12,9 +12,7 @@ import coef.CoefChoiceAll;
 public class Extract_1 extends Extract{
 	
 	@Override
-	public void extracting(Image img, Image w, BlockChoice b, CoefChoice pikseli, Alpha a){
-		//double alpha = a.fja_alpha(img.get_nizmat());
-		
+	public void extracting(Image img, Image w, BlockChoice b, CoefChoice pikseli, Alpha a){		
 		ArrayList<Integer> blk = b.fja_odaberi_blokove(img.get_nizmat());
 		ArrayList<Double> koefW = new ArrayList<Double>();
 
